@@ -1,0 +1,22 @@
+<H3 style="margin-left: 320px;">DANH SÁCH DỰ ÁN</H3>
+<table  class="table table-bordered border border-primary">
+
+    
+    <thead>
+        
+      <tr>
+        <th scope="col">id</th>
+        <th scope="col">Tên dự án</th>
+        <th scope="col">Ngày bắt đầu</th>
+        <th scope="col">Tiền</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let da of list_du_an">
+        <th scope="row">{{da.id}}</th>
+        <td>{{da.ten_du_an}}</td>
+        <td>{{da.ngay_start | date:'yyyy/dd/mm'}}</td>
+        <td>{{da.tien | number }} VNĐ</td>
+      </tr>
+    </tbody>
+  </table>

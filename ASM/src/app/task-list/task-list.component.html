@@ -1,0 +1,8 @@
+<h3 style="margin-left: 320px; ">DANH SÁCH TASK</h3>
+<div style="background-color: white;" *ngFor="let task of list_task" class="mt-2">
+    <div class="ms-1"><b>{{ task.ten_task }}</b> <br> {{ task.mo_ta}}</div>
+    <div class="mb-0 px-3 pb-2 border-bottom border-primary d-flex">
+        <div class="col-6">Priority: {{task.priority}}<br>Status:{{task.status}}</div>
+        <div class="col-6">Nhân viên:{{task.nhan_vien_id}}<br>Dự án:{{task.du_an_id}}</div>
+    </div>
+</div>

@@ -1,0 +1,24 @@
+<H3 style="margin-top: 10px; margin-left: 320px;">DANH SÁCH NHÂN VIÊN</H3>
+<table  class="table table-bordered border border-primary">
+
+    
+    <thead>
+        
+      <tr>
+        <th style="width: 30px;" scope="col">id</th>
+        <th scope="col">Họ và tên</th>
+        <th scope="col">Ngày sinh</th>
+        <th scope="col">Giơi tính</th>
+        <th scope="col">Khu vực</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let nv of list_nhan_vien">
+        <th   scope="row">{{nv.id}}</th>
+        <td class="p-2">{{nv.ho}} {{nv.ten}}</td>
+        <td>{{nv.ngay_sinh | date:'yyyy/dd/mm'}}</td>
+        <td>{{nv.phai==true ? "Nam":"Nữ" }}</td>
+        <td>{{nv.khu_vuc }}</td>
+      </tr>
+    </tbody>
+  </table>

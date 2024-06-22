@@ -1,0 +1,26 @@
+<form #frm1="ngForm" (ngSubmit)="xuly()"
+class="col-10 m-auto border border-success px-3 mt-2">
+<div class="mb-3">Tên dự án
+    <input type="text" name="ten_du_an" [(ngModel)]="data.ten_du_an" class="form-control">
+</div>
+<div class="mb-3">Ngày bắt đầu
+    <input type="date" name="ngay_start" class="form-control"
+    [ngModel]="data.ngay_start|date:'yyy-mm-dd'" (ngModelChange)="data.ngay_start=$event">
+</div>
+<div class="mb-3">Tiền
+    <input type="number" name="tien" [(ngModel)]="data.tien" class="form-control">
+</div>
+<div class="mb-3">Leader
+    <select name="leader" [(ngModel)]="data.leader" class="form-control">
+        <option *ngFor="let nv of listNhanVien" value="{{nv.id}}">{{nv.ho}} {{nv.ten}}</option>
+    </select>
+</div>
+<div class="mb-3">Thành viên
+    <select name="thanh_vien" [(ngModel)]="data.thanh_vien" class="form-control" multiple size="4">
+        <option *ngFor="let nv of listNhanVien" [ngValue]="nv.id">{{nv.ho}} {{nv.ten}}</option>
+    </select>
+</div>
+<div class="mb-3">
+    <button class="btn btn-success">Sửa dự án</button>
+</div>
+</form>

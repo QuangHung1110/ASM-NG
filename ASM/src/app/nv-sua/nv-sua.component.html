@@ -1,0 +1,27 @@
+<form #frm1="ngForm" (ngSubmit)="xuly()"
+class="col-10 m-auto border border-success px-3 mt-2">
+<div class="mb-3">Họ
+    <input type="text" name="ho" [(ngModel)]="data.ho" class="form-control">
+</div>
+<div class="mb-3">Tên
+    <input type="text" name="ten" [(ngModel)]="data.ten" class="form-control">
+</div>
+<div class="mb-3">Ngày sinh
+    <input type="date" name="ngay_sinh" class="form-control"
+    [ngModel]="data.ngay_sinh|date:'yyy-MM-dd'" (ngModelChange)="data.ngay_sinh=$event">
+</div>
+<div class="mb-3">Giới tính
+    <input type="radio" name="phai" [value]="1" [(ngModel)]="data.phai">Nam
+    <input type="radio" name="phai" [value]="0" [(ngModel)]="data.phai">Nữ 
+</div>
+<div class="mb-3">Khu vực
+    <select name="khu_vuc" [(ngModel)]="data.khu_vuc" class="form-control">
+        <option value="nam">Nam</option>
+        <option value="trung">Trung</option>
+        <option value="bac">Bắc</option>
+    </select>
+</div>
+<div class="mb-3">
+    <button class="btn btn-success">Sửa nhân viên</button>
+</div>
+</form>
